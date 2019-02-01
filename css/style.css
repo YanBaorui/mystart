@@ -5,12 +5,18 @@ kbd{
 	display: inline-block;
 	text-transform: uppercase;
 }
-main >div{
+main{
+	text-align: center;
+}
+#main{
+	display: inline-block;
+}
+#main >div{
 	margin-bottom: 3px;
 }
-main > div:nth-child(2){
+#main > div:nth-child(2){
 	margin-left: 1em;
 }
-main >div:nth-child(3){
+#main >div:nth-child(3){
 	margin-left: 2em;
 }
