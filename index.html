@@ -38,6 +38,10 @@
 				z:'zhihu.com',
 				m:'www.mcdonalds.com.cn'
 			}
+			hashInLocalStorage = JSON.parse(localStorage.getItem('zzz')||'null')
+        if(hashInLocalStorage){
+            hash = hashInLocalStorage
+        }
 			
 			var index=0;
 			while(index<keys.length){
@@ -50,11 +54,30 @@
 					var kbd1 = document.createElement('kbd');
 					kbd1.textContent=row[index2];
 					div1.appendChild(kbd1);
+					
+					Button = document.createElement('button')
+                    Button.textContent = '编辑'
+                    Button.id = row[index2]
+                    Button.onclick = function(ss){
+                        num = ss['target']['id']
+                        x = prompt("请输入网址")
+                        hash[num] = x
+                        // console.log(hash)
+                        localStorage.setItem('zzz',JSON.stringify(hash))
+                    }
+                    kbd1.appendChild(Button)
+					
 					index2++;
 				}
 							
 				index++;
 				//console.log(index);
+			}
+			
+			document.onkeypress = function(check){
+				key = check['key']
+				website = hash[key]
+				window.open('http://'+website,'_blank')
 			}
 		</script>
 	</body>                                                                                                                                                  

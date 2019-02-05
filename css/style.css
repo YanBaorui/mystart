@@ -1,9 +1,26 @@
 kbd{
-	border: 1px solid red;
-	width: 2em;
-	height: 2em;
+	/*border: 1px solid red;*/
+	width: 4em;
+	height: 4em;
 	display: inline-block;
 	text-transform: uppercase;
+	box-shadow: 0px 3px 3px rgba(0, 0, 0, .7);
+    color: #465d4c;
+    padding: 15px;
+    background: #a8d8b9;
+    border-radius: 12px;
+    text-shadow: 0px 0px 40px #465D4C, 0px 0px 80px #465D4C;
+    text-align: center;
+    position: relative;
+}
+kbd>button{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	display: none;
+}
+kbd:hover>button{
+	display: inline-block;
 }
 main{
 	text-align: center;
