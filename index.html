@@ -46,6 +46,7 @@
 			var index=0;
 			while(index<keys.length){
 				var div1 = document.createElement('div');
+				div1.className=('line')
 				document.getElementById("main").appendChild(div1);
 				row = keys[index];
 				//console.log(row);
@@ -53,10 +54,11 @@
 				while(index2<row.length){
 					var kbd1 = document.createElement('kbd');
 					kbd1.textContent=row[index2];
+					kbd1.className=('key')
 					div1.appendChild(kbd1);
 					
 					Button = document.createElement('button')
-                    Button.textContent = '编辑'
+                    Button.textContent = 'E'
                     Button.id = row[index2]
                     Button.onclick = function(ss){
                         num = ss['target']['id']
